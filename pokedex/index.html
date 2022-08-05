@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/custom.css">
@@ -20,16 +25,49 @@
         </div>
     </nav>
 
-    <div id="pokemon">
-        <div id="pokemon_wrapper">
+    <div id="pokemon__final__card">
+        <div id="pokemon_wrapper" class="animate__animated">
             <div id="pokemon_img_wrapper">
                 <img id="img" src="" alt="who is this Pokémon?">
             </div>
     
             <div id="pokemon_status_wrapper">
-                <h3 class="pokemon_name">nome</h3>
+
+                <div id="pokemon_status_name_wrapper">
+                    <h3 class="pokemon_name"></h3>
+                </div>
     
-                <div class="pokemon_stauts">
+                <div class="pokemon_status">
+                    <div class="pokemon_status_wrapper">
+                        <label for="">HP</label>
+                        <span class="pokemon_drop_stat pokemon_drop_stat_hp"></span>
+                        <progress id="pokemonHp" value="" max="200"></progress>
+                    </div>
+                    <div class="pokemon_status_wrapper">
+                        <label for="">Ataque</label>
+                        <span class="pokemon_drop_stat pokemon_drop_stat_atk"></span>
+                        <progress id="pokemonAtk" value="" max="200"></progress>
+                    </div>
+                    <div class="pokemon_status_wrapper">
+                        <label for="">Defesa</label>
+                        <span class=" pokemon_drop_stat pokemon_drop_stat_def"></span>
+                        <progress id="pokemonDef" value="" max="200"></progress>
+                    </div>
+                    <div class="pokemon_status_wrapper">
+                        <label for="">Atq. especial</label>
+                        <span class="pokemon_drop_stat pokemon_drop_stat_spe_atk"></span>
+                        <progress id="pokemonSpeAtk" value="" max="200"></progress>
+                    </div>
+                    <div class="pokemon_status_wrapper">
+                        <label for="">Def. especial</label>
+                        <span class="pokemon_drop_stat pokemon_drop_stat_spe_def"></span>
+                        <progress id="pokemonSpeDef" value="" max="200"></progress>
+                    </div>
+                    <div class="pokemon_status_wrapper">
+                        <label for="">Velocidade</label>
+                        <span class="pokemon_drop_stat pokemon_drop_stat_speed"></span>
+                        <progress id="pokemonSpeed" value="" max="200"></progress>
+                    </div>
     
                 </div>
             </div>
