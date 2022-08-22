@@ -37,7 +37,7 @@ find.addEventListener('click', () => {
             let response = JSON.parse(xhr.responseText)
 
             //RETORNA UM XPATH PARA A IMG NO DOM
-            img.src = response.sprites.front_default
+            img.src = response.sprites.other.dream_world.front_default
 
             //RETORNA O NOME DO POKÉMON NO FINAL CARD
             pokemonName.innerHTML = response.name

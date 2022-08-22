@@ -7,8 +7,18 @@
     box-sizing: border-box;
 }
 
+.bg-transparent{
+    background: none;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
+    overflow-y: hidden;
+    background: #ef233c;
+}
+
+.poke_logo{
+    width: 170px;
 }
 
 #pokemon__final__card{
@@ -17,44 +27,60 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("https://as01.epimg.net/meristation/imagenes/2019/09/27/noticias/1569599810_834018_1569600053_noticia_normal.jpg");
+    background: #ef233c;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #pokemon_wrapper{
     position: relative;
-    width: 900px;
+    top: 50px;
+    width: 75%;
     height: 450px;
     display: flex;
-    border: 1px solid lightgrey;
+    flex-direction: column;
+    align-items: center;
     border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
-    background: rgba(0, 0, 0, .45);
-    backdrop-filter: blur(5px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, .3);
+    background: #f1faee;
 }
-
-.hidden{
-    display: none;
-}
-
 
 #pokemon_img_wrapper{
-    height: 100%;
-    width: 33.33%;
+    position: absolute;
+    top: -170px;
+    height: 240px;
+    width: 240px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    animation: poke 2s ease-in-out infinite;
+}
+
+@keyframes poke{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
 #pokemon_img_wrapper > #img{
-    width: 90%;
-    height: 70%;
+    width: 230px;
+    height: 230px;
+    filter: drop-shadow(20px 10px 10px rgba(0,0,0,0.4));
 }
 
 #pokemon_status_wrapper{
+    align-self: flex-start;
     height: 100%;
-    width: 66.66%;
+    width: 35%;
+    border-radius: 15px 0px 0px 15px;
+    background-color: #bbd0ff;
 }
 
 #pokemon_status_wrapper > #pokemon_status_name_wrapper{
@@ -69,12 +95,13 @@ body{
     text-transform: capitalize;
     font-size: 2.5em;
     margin-top: 25px;
-    color: lightgray;
+    color: #2b2d42;
 }
 
 #pokemon_status_wrapper > .pokemon_status{
     height: 100%;
     width: 100%;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,24 +112,24 @@ body{
 #pokemon_status_wrapper > .pokemon_status > .pokemon_status_wrapper{
     height: 50px;
     width: 100%;
-    padding: 5px;
-    margin: 5px;
+    padding: 10px 25px;
+    margin: 0px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #pokemon_status_wrapper > .pokemon_status > .pokemon_status_wrapper > label{
     margin-top: 7px;
-    font-size: 1em;
-    color: lightgrey;
+    font-size: .9em;
+    color: #2b2d42;
 }
 
 #pokemon_status_wrapper > .pokemon_status > .pokemon_status_wrapper > .pokemon_drop_stat{
-    font-size: 1em;
-    color: lightgrey;
+    font-size: .9em;
+    color: #2b2d42;
 }
 
 #pokemon_status_wrapper > .pokemon_status > .pokemon_status_wrapper > progress{
-    width: 65%;
+    width: 50%;
 }
